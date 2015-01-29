@@ -24,6 +24,10 @@ strong {
   font-weight: bold;
 }
 
+a {
+  color: blue;
+}
+
 ul {
   list-style: none;
 }
@@ -95,8 +99,8 @@ h2 {
 
 #menu li {
   display: inline-block;
-  width: 100px;
-  margin: 0 9px;
+  width: 74px;
+  margin: 0 5px;
   text-align: center;
   font-weight: bold;
 }
@@ -109,10 +113,49 @@ h2 {
   box-shadow: inset 3px 3px 3px #555;
 }
 
-main {
-  min-height: 400px;
+main .cloud {
+  margin-bottom: 20px;
+}
+
+main > .cloud > h2 {
+  text-align: center;
+  margin: 20px 0;
 }
 
 main > section {
   display: none;
+}
+
+#skills table {
+  margin: 20px auto;
+}
+
+#skills img {
+  margin: 0 20px;
+}
+
+#contact > p {
+  text-align: center;
+}
+
+#contact > a {
+  width: 32px;
+  display: block;
+  margin: 20px auto 0 auto;
+}
+
+#contact > a > img:hover {
+  -ms-transform: scale(1.2,1.2);
+  -moz-transform: scale(1.2,1.2);
+  -webkit-transform: scale(1.2,1.2);
+}
+
+#contact strong {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#contact strong > a:hover {
+  text-decoration: underline;
 }
