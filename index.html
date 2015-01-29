@@ -7,7 +7,7 @@
     <title>Edward J. Jinotti</title>
   </head>
   <body>
-    <section id="top-links" class="group cloud">
+    <header id="top-links" class="group cloud">
       <img src="images/z2X2.jpg" alt="Edward J. Jinotti"/>
       <h2>Edward J. Jinotti</h2>
       <p>(software engineer)</p>
@@ -22,7 +22,7 @@
           <img src="images/linkedin_icon.png" alt="linkedin.com/in/ejinotti" />
         </a>
       </figure>
-    </section>
+    </header>
 
 
     <ul id="menu">
@@ -36,6 +36,65 @@
     <main id="main">
       <section id="about" class="cloud">
         <h2>about</h2>
+        <p>
+          Hello and a warm welcome!  My name is <strong>Ed</strong>.  I'm a
+          software engineer, and this is a little bit about me.
+        </p>
+        <p>
+          Sparing any backstory, it began in
+          <strong id="ancient">
+            ancient
+            <img id="ancient-pic" src="images/caveman_dino.jpg" alt="dinosaur"/>
+          </strong>
+          times when I graduated the
+          <a href="http://www.eng.umd.edu/" target="_blank">University of Maryland</a>
+          with a BS in Computer Engineering..
+        </p>
+        <figure class="about-icons group">
+          <img class="about-icon" src="images/umd_logo.png" alt=""/>
+        </figure>
+        <p>
+          My interests back then included network protocols, OS programming, and
+          cryptography.
+        </p>
+        <figure class="about-icons group">
+          <img class="about-icon" src="images/java.jpg" alt="java"/>
+          <img class="about-icon" src="images/cpp.png" alt="c++"/>
+          <img class="about-icon" src="images/c.png" alt="c"/>
+        </figure>
+        <p>
+          Things then took a drastic turn, as I came upon a tremendous
+          opportunity in the completely unrelated field of real estate.  I spent
+          a number of years administering, buying, and selling various
+          properties and investments.  This gave me a great deal of experience
+          with teamwork, managing people, and maximizing their skills. I also
+          took advantage of the flexible schedule to do some traveling and learn a
+          <a href="http://en.wikipedia.org/wiki/Portuguese_language" target="_blank">
+            foreign language</a>..
+        </p>
+        <figure class="about-icons group">
+          <img class="about-pic" src="images/dubai.jpg" alt="dubai"/>
+          <img class="about-pic" src="images/rio.jpg" alt="rio de janeiro"/>
+          <img class="about-pic" src="images/realestate.png" alt="real estate"/>
+        </figure>
+        <p>
+          Eventually, after a lot of effort, I made these properties and
+          investments self-sustaining.  This left me with plenty of free time
+          and a yearning for something to do with it.  There it was that my
+          original passion for programming was re-ignited.  I remembered that
+          I'd always enjoyed web programming and was in need of a refresher in
+          general, so I went ahead and did one of those infamous
+          <a href="http://www.appacademy.io/" target="_blank">
+            bootcamps</a>..
+        </p>
+        <figure class="about-icons group">
+          <img class="about-icon" src="images/app_academy.png" alt="app academy"/>
+          <img class="about-icon" src="images/rails.png" alt="ruby on rails"/>
+          <img class="about-icon" src="images/javascript.png" alt="javascript"/>
+        </figure>
+        <p>
+          And thus, we arrive at the present day.
+        </p>
       </section>
 
       <section id="skills" class="cloud">
@@ -89,14 +148,52 @@
 
       <section id="projects" class="cloud">
         <h2>projects</h2>
+
+        <div class="project group">
+          <a class="cloud project-pic" href="http://www.zeddit.io/" target="_blank">
+            <img src="images/zeddit.png" alt="zeddit"/>
+          </a>
+          <p>
+            <strong>Zeddit</strong> is a social link and article aggregation
+            app inspired by Reddit.  It allows users to collaborate in their
+            own forums, posting and commenting for news and entertainment.
+            Users may subscribe to the forums they prefer, creating their own
+            customized front page feed of links and articles.  It is a
+            single-page app, written in Backbone.JS and Rails.
+          </p>
+          <a class="project-link" href="https://github.com/ejinotti/Zeddit" target="_blank">
+            github
+          </a>
+          <a class="project-link" href="http://www.zeddit.io/" target="_blank">
+            live
+          </a>
+        </div>
+
+        <div class="project group">
+          <a class="cloud project-pic" href="http://zedchat.herokuapp.com/" target="_blank">
+            <img src="images/zchat.png" alt="zeddit"/>
+          </a>
+          <p>
+            <strong>zChat</strong> is a chat app in Node.JS.  It supports
+            joining multiple channels, and has a tabbed UI for managing them.
+          </p>
+          <a class="project-link" href="https://github.com/ejinotti/zChat" target="_blank">
+            github
+          </a>
+          <a class="project-link" href="http://zedchat.herokuapp.com/" target="_blank">
+            live
+          </a>
+        </div>
       </section>
 
       <section id="contact" class="cloud">
         <h2>contact</h2>
         <p>
           For r&eacute;sum&eacute; and other inquiries,
-          please contact me at any of the following
-          (but preferably by eMail):
+          please contact me at any of the following:
+        </p>
+        <p>
+          (but preferably by eMail)
         </p>
 
         <a href="mailto:ejinotti2@gmail.com">
@@ -130,6 +227,10 @@
         </strong>
       </section>
     </main>
+
+    <footer>
+      <small>&copy;2015 Edward J. Jinotti</small>
+    </footer>
 
     <script>
       $(document).ready(function () {

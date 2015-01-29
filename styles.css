@@ -24,6 +24,10 @@ strong {
   font-weight: bold;
 }
 
+small {
+  font-size: x-small;
+}
+
 a {
   color: blue;
 }
@@ -41,7 +45,7 @@ body {
 
 section {
   margin: auto;
-  width: 800px;
+  width: 600px;
 }
 
 h2 {
@@ -126,12 +130,84 @@ main > section {
   display: none;
 }
 
+#about {
+  position: relative;
+}
+
+#about > p {
+  margin: 10px 40px;
+}
+
+#about > p > a:hover {
+  text-decoration: underline;
+}
+
+#ancient {
+  color: blue;
+}
+
+#ancient:hover {
+  cursor: pointer;
+}
+
+#ancient > img {
+  position: absolute;
+  top: 60px;
+  left: 200px;
+  display: none;
+  border: 1px solid #aaa;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px #555;
+}
+
+.about-icons {
+  margin-right: 80px;
+}
+
+.about-icon {
+  float: right;
+  width: 80px;
+  height: 80px;
+}
+
+.about-pic {
+  float: right;
+}
+
 #skills table {
   margin: 20px auto;
 }
 
 #skills img {
+  margin: 0 10px;
+}
+
+.project {
+  margin: 20px auto;
+}
+
+.project > .project-pic {
+  float: left;
   margin: 0 20px;
+}
+
+.project > p {
+  margin-right: 20px;
+}
+
+.project > .project-pic:hover {
+  box-shadow: inset 3px 3px 3px #555;
+}
+
+.project > .project-link {
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.project > .project-link:hover {
+  text-decoration: underline;
 }
 
 #contact > p {
@@ -158,4 +234,10 @@ main > section {
 
 #contact strong > a:hover {
   text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  color: #999;
+  margin: 20px 0;
 }
