@@ -30,6 +30,7 @@ ul {
 
 body {
   font-family: verdana;
+  font-size: small;
   background: #6F8CDE;
   max-width: 1000px;
 }
@@ -69,7 +70,6 @@ h2 {
 
 #top-links > p {
   margin: 20px 0 20px 25px;
-  font-size: small;
   font-style: italic;
 }
 
@@ -88,7 +88,7 @@ h2 {
 }
 
 #menu {
-  margin: auto;
+  margin: 20px auto;
   width: 400px;
   padding: 0 6px;
 }
@@ -96,17 +96,23 @@ h2 {
 #menu li {
   display: inline-block;
   width: 100px;
-  margin: 0 8px;
+  margin: 0 9px;
   text-align: center;
-  font-size: small;
   font-weight: bold;
 }
 
 #menu li:hover {
   cursor: pointer;
+}
+
+#menu li:hover, #menu li.active {
   box-shadow: inset 3px 3px 3px #555;
 }
 
 main {
   min-height: 400px;
+}
+
+main > section {
+  display: none;
 }
