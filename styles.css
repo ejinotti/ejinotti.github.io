@@ -1,0 +1,112 @@
+html, body, header, footer, section, article, div, main,
+strong, a, img, p, h1, h2, h3, time, ul, li, small,
+form, label, input, textarea, button, nav, span, figure {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  box-sizing: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+.group:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+strong {
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: verdana;
+  background: #6F8CDE;
+  max-width: 1000px;
+}
+
+section {
+  margin: auto;
+  width: 800px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.cloud {
+  background: white;
+  box-shadow: 3px 3px 3px #555;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#top-links {
+  width: 400px;
+  margin: 20px auto;
+}
+
+#top-links > img {
+  float: right;
+  height: 160px;
+  width: auto;
+}
+
+#top-links > h2 {
+  margin: 20px 0;
+}
+
+#top-links > p {
+  margin: 20px 0 20px 25px;
+  font-size: small;
+  font-style: italic;
+}
+
+#top-links > figure {
+  margin-left: 27px;
+}
+
+#top-links a > img {
+  margin-right: 10px;
+}
+
+#top-links a > img:hover {
+  -ms-transform: scale(1.2,1.2);
+  -moz-transform: scale(1.2,1.2);
+  -webkit-transform: scale(1.2,1.2);
+}
+
+#menu {
+  margin: auto;
+  width: 400px;
+  padding: 0 6px;
+}
+
+#menu li {
+  display: inline-block;
+  width: 100px;
+  margin: 0 8px;
+  text-align: center;
+  font-size: small;
+  font-weight: bold;
+}
+
+#menu li:hover {
+  cursor: pointer;
+  box-shadow: inset 3px 3px 3px #555;
+}
+
+main {
+  min-height: 400px;
+}
