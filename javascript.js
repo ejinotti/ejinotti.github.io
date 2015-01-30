@@ -6,6 +6,9 @@ function ZedUI () {
   $("#menu").on("click", "li", this.selectTab.bind(this));
   $("#ancient").on("mouseenter", $.fn.fadeIn.bind($("#ancient-pic")));
   $("#ancient").on("mouseleave", $.fn.fadeOut.bind($("#ancient-pic")));
+  $(".know-more-link").on("click", $.fn.trigger.bind(
+    $("#menu li:last-child"), "click"
+  ));
 }
 
 ZedUI.prototype.selectTab = function (event) {

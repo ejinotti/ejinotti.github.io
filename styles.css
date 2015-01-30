@@ -172,6 +172,14 @@ main > section {
 
 .about-pic {
   float: right;
+  margin: 10px 0 10px 10px;
+  border-radius: 5px;
+}
+
+p.know-more {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 #skills table {
