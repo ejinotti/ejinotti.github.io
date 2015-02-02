@@ -4,8 +4,7 @@ function ZedUI () {
   }).addClass("active");
   $("#about").slideDown();
   $("#menu").on("click", "li", this.selectTab.bind(this));
-  $("#ancient").on("mouseenter", $.fn.fadeIn.bind($("#ancient-pic")));
-  $("#ancient").on("mouseleave", $.fn.fadeOut.bind($("#ancient-pic")));
+  $("#ancient").on("click", this.activateDino);
   $(".know-more-link").on("click", $.fn.trigger.bind(
     $("#menu li:last-child"), "click"
   ));
@@ -25,4 +24,12 @@ ZedUI.prototype.selectTab = function (event) {
   $currentSection.slideUp($.fn.slideDown.bind($newSection));
 
   this.$currentTab = $newTab;
+};
+
+ZedUI.prototype.activateDino = function (event) {
+  $("#ancient-pic").fadeIn(window.setTimeout.bind(
+    null,
+    $.fn.fadeOut.bind($("#ancient-pic")),
+    1000
+  ));
 };
