@@ -207,14 +207,16 @@ p.know-more {
   box-shadow: inset 3px 3px 3px #555;
 }
 
-.project > .project-link {
-  display: block;
-  font-weight: bold;
-  text-align: center;
+.project > .project-links {
   margin: 10px 0;
+  text-align: center;
 }
 
-.project > .project-link:hover {
+.project > .project-links > a {
+  font-weight: bold;
+}
+
+.project > .project-links > a:hover {
   text-decoration: underline;
 }
 
