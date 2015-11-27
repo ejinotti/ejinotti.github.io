@@ -1,39 +1,30 @@
 $(function () {
-  function ZedUI () {
-    this.$currentTab = $("#menu li").filter(function () {
-      return $(this).text() === "about";
-    }).addClass("active");
-    $("#about").slideDown();
-    $("#menu").on("click", "li", this.selectTab.bind(this));
-    $("#ancient").on("click", this.activateDino);
-    $(".know-more-link").on("click", $.fn.trigger.bind(
-      $("#menu li:last-child"), "click"
-    ));
+  var $currentTab = $('#menu li').filter(function () {
+    return $(this).text() === location.hash.slice(1);
+  });
+
+  if (!$currentTab.length) {
+    $currentTab = $('#menu li').first();
   }
 
-  ZedUI.prototype.selectTab = function (event) {
-    var $newTab = $(event.currentTarget);
+  activateTab($currentTab);
 
-    if ($newTab.text() === this.$currentTab.text()) return;
+  $('#menu').on('click', 'li:not(.active)', function (e) {
+    activateTab($(this));
+  });
 
-    var $newSection = $("#" + $newTab.text());
-    var $currentSection = $("#" + this.$currentTab.text());
+  $('.know-more-link').click(function (e) {
+    activateTab($('#menu li').last());
+  });
 
-    this.$currentTab.removeClass("active");
-    $newTab.addClass("active");
+  function activateTab($newTab) {
+    var $currentSection = $('#' + $currentTab.text());
+    var $newSection = $('#' + $newTab.text());
+
+    $currentTab.removeClass('active');
+    $newTab.addClass('active');
 
     $currentSection.slideUp($.fn.slideDown.bind($newSection));
-
-    this.$currentTab = $newTab;
-  };
-
-  ZedUI.prototype.activateDino = function (event) {
-    $("#ancient-pic").fadeIn(window.setTimeout.bind(
-      null,
-      $.fn.fadeOut.bind($("#ancient-pic")),
-      1000
-    ));
-  };
-
-  new ZedUI();
+    $currentTab = $newTab;
+  }
 });
