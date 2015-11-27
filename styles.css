@@ -67,7 +67,7 @@ h2 {
 #top-links {
   width: 400px;
   margin: 20px auto;
-  /*background: #eee;*/
+  padding: 5px 20px;
 }
 
 #top-links > img {
