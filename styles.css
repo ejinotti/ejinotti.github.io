@@ -64,6 +64,12 @@ h2 {
   padding: 5px;
 }
 
+.img-pop:hover {
+  -ms-transform: scale(1.2,1.2);
+  -moz-transform: scale(1.2,1.2);
+  -webkit-transform: scale(1.2,1.2);
+}
+
 #top-links {
   width: 400px;
   margin: 20px auto;
@@ -91,12 +97,6 @@ h2 {
 
 #top-links a > img {
   margin-right: 10px;
-}
-
-#top-links a > img:hover {
-  -ms-transform: scale(1.2,1.2);
-  -moz-transform: scale(1.2,1.2);
-  -webkit-transform: scale(1.2,1.2);
 }
 
 #menu {
@@ -144,24 +144,6 @@ main > section {
 
 #about > p > a:hover {
   text-decoration: underline;
-}
-
-#ancient {
-  color: blue;
-}
-
-#ancient:hover {
-  cursor: pointer;
-}
-
-#ancient > img {
-  position: absolute;
-  top: 60px;
-  left: 200px;
-  display: none;
-  border: 1px solid #aaa;
-  border-radius: 20px;
-  box-shadow: 3px 3px 3px #555;
 }
 
 .about-icons {
@@ -232,12 +214,6 @@ p.know-more {
   width: 32px;
   display: block;
   margin: 20px auto 0 auto;
-}
-
-#contact > a > img:hover {
-  -ms-transform: scale(1.2,1.2);
-  -moz-transform: scale(1.2,1.2);
-  -webkit-transform: scale(1.2,1.2);
 }
 
 #contact strong {
