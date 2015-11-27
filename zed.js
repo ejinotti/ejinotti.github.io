@@ -1,13 +1,7 @@
 $(function () {
-  var $currentTab = $('#menu li').filter(function () {
-    return $(this).text() === location.hash.slice(1);
-  });
+  var $currentTab = getTabFromHash();
 
-  if (!$currentTab.length) {
-    $currentTab = $('#menu li').first();
-  }
-
-  activateTab($currentTab);
+  activateTab($currentTab, true);
 
   $('#menu').on('click', 'li:not(.active)', function (e) {
     activateTab($(this));
@@ -17,14 +11,32 @@ $(function () {
     activateTab($('#menu li').last());
   });
 
-  function activateTab($newTab) {
+  $(window).on('popstate', function (e) {
+    activateTab(getTabFromHash(), true);
+  });
+
+  function getTabFromHash() {
+    var $tab = $('#menu li').filter(function () {
+      return $(this).text() === location.hash.slice(1);
+    });
+
+    return $tab.length ? $tab : $('#menu li').first();
+  }
+
+  function activateTab($newTab, noHistory) {
+    var newId = '#' + $newTab.text();
+
     var $currentSection = $('#' + $currentTab.text());
-    var $newSection = $('#' + $newTab.text());
+    var $newSection = $(newId);
 
     $currentTab.removeClass('active');
     $newTab.addClass('active');
 
     $currentSection.slideUp($.fn.slideDown.bind($newSection));
     $currentTab = $newTab;
+
+    if (!noHistory) {
+      history.pushState(null, null, location.pathname + newId);
+    }
   }
 });
