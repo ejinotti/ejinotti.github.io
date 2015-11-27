@@ -35,8 +35,8 @@ $(function () {
     $currentSection.slideUp($.fn.slideDown.bind($newSection));
     $currentTab = $newTab;
 
-    if (!noHistory) {
-      history.pushState(null, null, location.pathname + newId);
-    }
+    if (noHistory) return;
+
+    history.pushState(null, null, location.pathname + newId);
   }
 });
