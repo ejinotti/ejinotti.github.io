@@ -176,6 +176,7 @@ p.know-more {
   margin: 0 10px;
 }
 
+/*
 .project {
   margin: 40px auto;
 }
@@ -205,6 +206,7 @@ p.know-more {
 .project > .project-links > a:hover {
   text-decoration: underline;
 }
+*/
 
 #contact > p {
   text-align: center;
